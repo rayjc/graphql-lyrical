@@ -5,8 +5,8 @@ volumes:
     driver: local
 
 services:
-  api:
-    container_name: lyrical-api
+  app:
+    container_name: lyrical-app
     build:
       context: .
       dockerfile: Dockerfile
