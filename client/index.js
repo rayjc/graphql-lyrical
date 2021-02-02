@@ -5,6 +5,7 @@ import SongList from './components/SongList';
 
 
 const client = new ApolloClient({
+  uri: 'http://localhost/graphql',
   cache: new InMemoryCache()
 });
 
