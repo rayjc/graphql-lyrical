@@ -6,7 +6,7 @@ import SongList from './SongList';
 const Routes = () => {
   return (
     <Switch>
-      <Route exact path="/song/new">
+      <Route exact path="/songs/new">
         <SongCreate />
       </Route>
       <Route exact path="/">
