@@ -2,6 +2,7 @@ import React from 'react';
 import { gql, useQuery } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import fetchSongs from '../queries/fetch-songs';
+import SongRemove from './SongRemove';
 
 const SongList = () => {
   const { loading, error, data } = useQuery(fetchSongs);
@@ -12,9 +13,12 @@ const SongList = () => {
   return (
     <div>
       <ul className="collection">{
-        data.songs.map(song => {
+        data.songs.map(({ id, title }) => {
           return (
-            <li key={song.id} className="collection-item">{song.title}</li>
+            <li key={id} className="collection-item">
+              {title}
+              <SongRemove songId={id} />
+            </li>
           );
         })
       }</ul>
