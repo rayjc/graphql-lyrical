@@ -1,11 +1,11 @@
 import React from 'react';
-import { gql, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { Link } from 'react-router-dom';
-import fetchSongs from '../queries/fetch-songs';
+import FETCH_SONGS from '../queries/fetch-songs';
 import SongRemove from './SongRemove';
 
 const SongList = () => {
-  const { loading, error, data } = useQuery(fetchSongs);
+  const { loading, error, data } = useQuery(FETCH_SONGS);
 
   if (loading) return <div>'Loading...'</div>;
   if (error) return <div>`Error! ${error.message}`</div>;
@@ -16,7 +16,7 @@ const SongList = () => {
         data.songs.map(({ id, title }) => {
           return (
             <li key={id} className="collection-item">
-              {title}
+              <Link to={`/songs/${id}`}>{title}</Link>
               <SongRemove songId={id} />
             </li>
           );

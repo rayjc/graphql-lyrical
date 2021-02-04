@@ -3,7 +3,7 @@ import React from 'react';
 import FETCH_SONGS from '../queries/fetch-songs';
 
 const REMOVE_SONG = gql`
-  mutation DELETE_SONG($id: ID) {
+  mutation DELETE_SONG($id: ID!) {
     deleteSong(id: $id) {
       id
     }
