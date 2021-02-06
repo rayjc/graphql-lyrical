@@ -6,3 +6,10 @@
 .material-icons {
     cursor: pointer;
 }
+
+.vote-box {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

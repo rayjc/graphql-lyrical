@@ -10,6 +10,9 @@ import App from './components/App';
 
 const client = new ApolloClient({
   uri: 'http://localhost/graphql',
+  // Note: no need to set TypePolicy or dataIdFromObject since
+  // Apollo uses id as key by default; just remember to include id
+  // in response
   cache: new InMemoryCache()
 });
 
