@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { Link } from 'react-router-dom';
-import FETCH_SONGS from '../queries/fetch-songs';
+import FETCH_SONGS from '../../queries/fetch-songs';
 import SongRemove from './SongRemove';
 
 const SongList = () => {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import SongCreate from './SongCreate';
-import SongDetail from './SongDetail';
-import SongList from './SongList';
+import SongCreate from './song/SongCreate';
+import SongDetail from './song/SongDetail';
+import SongList from './song/SongList';
 
 const Routes = () => {
   return (

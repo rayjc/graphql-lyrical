@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { gql, useMutation } from '@apollo/client';
 import { Link, useHistory } from 'react-router-dom';
-import fetchSongs from '../queries/fetch-songs';
+import fetchSongs from '../../queries/fetch-songs';
 
 const ADD_SONG = gql`
   mutation AddSong($title: String) {
